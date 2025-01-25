@@ -1,7 +1,17 @@
-<% @kittens.each do |ktn| %>
-    <div class="kitten_name">name: <%= ktn.name %></div>
-    <div class="kitten_age">age: <%= ktn.age %></div>
-    <div class="kitten_cuteness">cuteness: <%= ktn.cuteness %></div>
-    <div class="kitten_softness">softness: <%= ktn.softness %></div>
-<% end %>
- <%= link_to "Create a new Kitten",new_kitten_path %>
+<h3>Welcome to the kittens page! Under this title are all the kittens that have been added</h3>
+<div class="index_content">
+    <% @kittens.each do |ktn| %>
+        <div class="index_boxes">
+            <div class="kitten_name">name: <%= ktn.name %></div>
+            <div class="kitten_age">age: <%= ktn.age %></div>
+            <div class="kitten_cuteness">cuteness: <%= ktn.cuteness %></div>
+            <div class="kitten_softness">softness: <%= ktn.softness %></div>
+            <div class="edit_kitten_button"><%= link_to "Edit",edit_kitten_path(ktn.id) %></div>
+
+        </div>
+    <% end %>
+
+    <div class="kitten_creation_button">
+        <%= link_to "Create a new Kitten",new_kitten_path %>
+    </div>
+</div>
