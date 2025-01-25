@@ -1,0 +1,7 @@
+<% @kittens.each do |ktn| %>
+    <div class="kitten_name">name: <%= ktn.name %></div>
+    <div class="kitten_age">age: <%= ktn.age %></div>
+    <div class="kitten_cuteness">cuteness: <%= ktn.cuteness %></div>
+    <div class="kitten_softness">softness: <%= ktn.softness %></div>
+<% end %>
+ <%= link_to "Create a new Kitten",new_kitten_path %>

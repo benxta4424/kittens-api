@@ -1,0 +1,7 @@
+<% if flash[:creation_success] %>
+    <%= flash[:creation_success] %>
+<% end %>
+<div class="kitten_name">name: <%= @kitten.name %></div>
+<div class="kitten_age">age: <%= @kitten.age %></div>
+<div class="kitten_cuteness">cuteness: <%= @kitten.cuteness %></div>
+<div class="kitten_softness">softness: <%= @kitten.softness %></div>

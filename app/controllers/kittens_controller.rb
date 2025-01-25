@@ -4,11 +4,11 @@ class KittensController < ApplicationController
   end
 
   def new
-    @kitten=Kitten.new(kitten_params)
+    @kitten=Kitten.new
   end
 
   def create
-    @kitten=Kitten.new(kitten_params)
+    @kitten = Kitten.new(kitten_params)
 
     if @kitten.save
       flash[:creation_success]="Sucesfully created a kitten!"
@@ -20,7 +20,7 @@ class KittensController < ApplicationController
   end
 
   def show
-    @kitten=Kitten.find(params[:id])
+    @kitten = Kitten.find(params[:id])
   end
 
   def edit
@@ -50,6 +50,6 @@ class KittensController < ApplicationController
   private
 
   def kitten_params
-    params.require(:kittens).permit(:name, :age, :cuteness, :softness)
+    params.require(:kitten).permit(:name, :age, :cuteness, :softness)
   end
 end

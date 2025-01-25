@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag "new_kitten" %>
+<h1>Create a Kitten</h1>
+
+<div class="content">
+    
+    <%= form_with model: @kitten, url: kittens_path , method: :post, data: { turbo:false } do |f| %>
+
+        <div class="name">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+        </div>
+
+        <div class="age">
+            <%= f.label :age %>
+            <%= f.number_field :age %>
+        </div>
+        
+        <div class="cuteness">
+            <%= f.label :cuteness %>
+            <%= f.number_field :cuteness,min:1,max:10 %>
+        </div>
+
+        <div class="softness">
+            <%= f.label :softness %>
+            <%= f.number_field :softness,min:1,max:10 %>
+        </div>
+
+        <div class="submit_kitten">
+            <%= f.submit "Add Kitten" %>
+        </div>
+    <% end %>
+</div>

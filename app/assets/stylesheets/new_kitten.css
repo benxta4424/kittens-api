@@ -1,0 +1,21 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.content {
+    display: flex;
+    border: 2px solid green;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 9px 9px 20px #16a34a;
+}
+.submit_kitten {
+    display: flex;
+    justify-content: end;
+    height: 30px;
+}
