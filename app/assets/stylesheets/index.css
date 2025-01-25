@@ -38,9 +38,13 @@ h3 {
     padding: 30px;
     margin-bottom: 70px;
 }
-.edit_kitten_button {
+.change_kitten_button {
     display: flex;
     flex: 1;
-    justify-content:end;
+    justify-content:space-between;
     font-size: 11px;
+}
+.edit_kitten {
+    text-decoration: none;
+    color: black;
 }

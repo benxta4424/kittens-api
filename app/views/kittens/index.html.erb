@@ -6,7 +6,10 @@
             <div class="kitten_age">age: <%= ktn.age %></div>
             <div class="kitten_cuteness">cuteness: <%= ktn.cuteness %></div>
             <div class="kitten_softness">softness: <%= ktn.softness %></div>
-            <div class="edit_kitten_button"><%= link_to "Edit",edit_kitten_path(ktn.id) %></div>
+            <div class="change_kitten_button">
+                <button><%= link_to "Edit",edit_kitten_path(ktn.id),class:"edit_kitten" %></button>
+                <%= button_to("Delete", kitten_path(ktn.id), method: :delete, class: "delete-link") %>
+            </div>
 
         </div>
     <% end %>
